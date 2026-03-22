@@ -23,3 +23,17 @@ Faced with a highly constrained dataset (only 409 training samples), training a 
 
 ## Libraries Used
 `pandas`, `numpy`, `xgboost`, `faster-whisper`, `language-tool-python`, `librosa`, `scikit-learn`, `seaborn`, `matplotlib`
+
+
+## 📂 Repository Structure
+
+* `data/` - Contains the pre-computed prediction outputs (the CSV files). **These are the required inputs for the final blending script.**
+* `notebook5faa0bc8b1.ipynb` - The main notebook containing the feature extraction and model training pipelines.
+* `blendnotbeook.ipynb` - The final ensembling script that blends the independent model predictions.
+
+## ⚙️ How to Run the Ensemble
+
+To generate the final blended submission:
+1. Ensure the `data/` folder contains your two prediction CSV files.
+2. Run `blendnotbeook.ipynb`. 
+3. The script will automatically locate the CSVs, apply the weighted average, and output the final `submission_final_blend.csv`.
